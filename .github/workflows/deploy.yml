@@ -1,0 +1,67 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    # Chỉ trigger workflow khi các file/thư mục này có sự thay đổi
+    paths:
+      - '*.html'             # Các file HTML (index.html, contact.html)
+      - 'src/**'             # Thư mục source chứa CSS/JS (src/input.css)
+      - 'package.json'       # Cấu hình npm
+      - 'package-lock.json'  # Lock file của npm
+      - 'assets/**'          # Thêm dòng này nếu sau này bạn có thư mục chứa ảnh/font
+
+# Cấp quyền cho GITHUB_TOKEN để có thể deploy lên GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Chỉ cho phép 1 tiến trình deploy chạy tại một thời điểm
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project (Ví dụ: build Tailwind CSS)
+        # Lệnh này sẽ chạy script "build" trong package.json của bạn. 
+        # Cờ --if-present giúp tránh lỗi nếu bạn không khai báo script "build".
+        run: npm run build --if-present
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Thư mục chứa code sau khi build để đưa lên web. 
+          # Nếu file HTML của bạn nằm ở thư mục gốc, hãy để '.'. 
+          # Nếu output build ra thư mục khác (vd: 'dist' hay 'build'), hãy đổi thành './dist'
+          path: '.'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
