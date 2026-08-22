@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Landwind - Building digital products & brands</title>
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body>
+  <a href="#main">Bỏ qua đến nội dung chính</a>
+
+  <!-- 1. Navbar -->
+  <header>  
+    <nav aria-label="Điều hướng chính">
+      <a href="/">Landwind</a>
+      <ul>
+        <li><a href="#company">Company</a></li>
+        <li><a href="#marketplace">Marketplace</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="/login">Log in</a>
+      <button>Get started</button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 2. Hero -->
+    <section aria-labelledby="hero-title">
+      <h1 id="hero-title">Building digital products & brands.</h1>
+      <p>Here at flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
+      <button>Start 30 day free trial</button>
+      <a href="#pricing">Pricing & FAQ</a>
+    </section>
+
+    <!-- 3. Logo khách hàng -->
+    <section class="mx-auto w-full max-w-6xl px-5 py-20">
+      <h2 id="logo-title" class="sr-only">Khách hàng của chúng tôi</h2>
+      <ul class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
+        <!-- nhớ SVG -->
+        <li class="text-gray-400 hover:text-gray-500">Google</li>
+        <li class="text-gray-400 hover:text-gray-500">Microsoft</li>
+        <li class="text-gray-400 hover:text-gray-500">Spotify</li>
+        <li class="text-gray-400 hover:text-gray-500">Mailchimp</li>
+        <li class="text-gray-400 hover:text-gray-500">Airbnb</li>
+        <li class="text-gray-400 hover:text-gray-500">UBER</li>
+      </ul>
+    </section>
+
+    <!-- 4. Tính năng -->
+    <section aria-labelledby="features-title" class="mx-auto w-full max-w-6xl px-5 py-24">
+      <h2 id="features-title" class="font-display text-3xl font-bold text-ink">Work with tools you already use</h2>
+      
+      <ul class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <li>
+          <span class="grid h-11 w-11 place-items-center rounded-lg bg-brand-50 text-brand-600 mb-4">
+            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <!-- Đường dẫn SVG -->
+            </svg>
+          </span>
+          <h3 class="font-display text-xl font-bold text-ink mb-2">Continuous integration</h3>
+          <p class="text-muted">Accelerate critical development work, eliminate toil, and deploy changes with ease.</p>
+        </li>
+        <!-- Các thẻ tính năng khác tương tự... -->
+      </ul>
+    </section>
+
+    <!-- 5. Số liệu -->
+    <section aria-labelledby="stats-title" class="mx-auto w-full max-w-6xl px-5 py-24">
+      <h2 id="stats-title" class="sr-only">Trusted Worldwide</h2>
+      <dl class="grid grid-cols-2 gap-8 divide-x divide-gray-200 lg:grid-cols-4 text-center">
+        <div class="flex flex-col">
+          <dt class="order-2 mt-2 text-sm text-muted">uptime</dt>
+          <dd class="font-display text-4xl font-extrabold text-brand-600">99.99%</dd>
+        </div>
+        <div class="flex flex-col">
+          <dt class="order-2 mt-2 text-sm text-muted">Users</dt>
+          <dd class="font-display text-4xl font-extrabold text-brand-600">600M+</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- 6. Cảm nhận -->
+    <section aria-labelledby="testimonial-title" class="mx-auto w-full max-w-6xl px-5 py-24 bg-gray-50">
+      <h2 id="testimonial-title" class="sr-only">Khách hàng nói gì về chúng tôi</h2>
+      <figure class="max-w-screen-md mx-auto text-center">
+        <blockquote class="text-2xl font-medium text-ink font-display mb-6">
+          "Flowbite is just awesome. It contains tons of predesigned components and pages starting from login screen to complex dashboard. Perfect choice for your next SaaS application."
+        </blockquote>
+        <figcaption class="flex items-center justify-center gap-3">
+          <span class="font-bold text-ink">Micheal Gough</span>
+          <span class="text-gray-300">|</span>
+          <cite class="text-muted not-italic">CEO at Google</cite>
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- 7. Bảng giá -->
+    <section aria-labelledby="pricing-title" class="mx-auto w-full max-w-6xl px-5 py-24">
+      <h2 id="pricing-title" class="text-center font-display text-3xl font-bold text-ink mb-12">Pay as you grow</h2>
+      
+      <ul class="grid items-stretch gap-6 lg:grid-cols-3">
+        
+        <li class="flex h-full flex-col rounded-card border border-line p-8 text-center bg-surface shadow-sm">
+          <h3 class="font-display text-2xl font-semibold text-ink">Starter</h3>
+          <p class="mt-4 text-muted">Great for personal use.</p>
+          <div class="my-8 text-5xl font-extrabold text-ink">$49<span class="text-xl font-medium text-muted">/mo</span></div>
+          <ul class="mb-8 flex flex-col gap-4 text-left">
+            <li>1 developer</li>
+            <li>6 months support</li>
+          </ul>
+          <a href="#" class="btn btn-primary mt-auto">Get started</a>
+        </li>
+
+        <li class="relative flex h-full flex-col rounded-card p-8 text-center bg-surface shadow-md ring-2 ring-brand-600">
+          <span class="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-600 px-3 py-1 text-xs font-semibold text-white">
+            Được chọn nhiều nhất
+          </span>
+          <h3 class="font-display text-2xl font-semibold text-ink">Company</h3>
+          <p class="mt-4 text-muted">Best for large scale uses.</p>
+          <div class="my-8 text-5xl font-extrabold text-ink">$99<span class="text-xl font-medium text-muted">/mo</span></div>
+          <ul class="mb-8 flex flex-col gap-4 text-left">
+            <li>10 developers</li>
+            <li>24 months support</li>
+            <li>Free updates</li>
+          </ul>
+          <a href="#" class="btn btn-primary mt-auto">Get started</a>
+        </li>
+
+      </ul>
+    </section>
+
+    <!-- 8. Câu hỏi thường gặp -->
+    <section aria-labelledby="faq-title" class="mx-auto w-full max-w-6xl px-5 py-24">
+      <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr]">
+        <div>
+          <h2 id="faq-title" class="font-display text-3xl font-bold text-ink mb-4">Frequently asked questions</h2>
+        </div>
+        
+        <ul class="flex flex-col gap-8">
+          <li>
+            <h3 class="font-bold text-ink mb-2">Can I use FlowBite in open source projects?</h3>
+            <p class="text-muted">Generally, it is accepted to use FlowBite in open-source projects...</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 9. CTA (Kêu gọi hành động) -->
+    <section aria-labelledby="cta-title">
+      <h2 id="cta-title">Start your free trial today</h2>
+      <p>Try Flowbite Platform for 30 days. No credit card required</p>
+      <button>Free trial for 30 days</button>
+    </section>
+  </main>
+
+  <!-- 10. Footer -->
+  <footer>
+    <div>
+      <nav aria-labelledby="company-title">
+        <h3 id="company-title">COMPANY</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#premium">Premium</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#affiliate">Affiliate Program</a></li>
+          <li><a href="#coupon">Get Coupon</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="help-title">
+        <h3 id="help-title">HELP AND SUPPORT</h3>
+        <ul>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#knowledge">Knowledge Center</a></li>
+          <li><a href="#premium-support">Premium Support</a></li>
+          <li><a href="#sponsorships">Sponsorships</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="learning-title">
+        <h3 id="learning-title">LEARNING</h3>
+        <ul>
+          <li><a href="#learn-hub">Learn Hub</a></li>
+          <li><a href="#manuals">Manuals</a></li>
+          <li><a href="#tutorials">Tutorials</a></li>
+          <li><a href="#communities">Communities</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="resources-title">
+        <h3 id="resources-title">RESOURCES</h3>
+        <ul>
+          <li><a href="#third-party">Third-Party Tools</a></li>
+          <li><a href="#illustrations">Illustrations</a></li>
+          <li><a href="#themesberg">Themesberg</a></li>
+          <li><a href="#bluehost">Bluehost</a></li>
+          <li><a href="#stock-photos">Stock Photos</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="legal-title">
+        <h3 id="legal-title">LEGAL</h3>
+        <ul>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms & Conditions</a></li>
+          <li><a href="#eula">EULA</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div>
+      <a href="/">
+        Landwind
+      </a>
+      
+      <p>© 2022 Flowbite, Inc. All rights reserved.</p>
+      
+      <ul aria-label="Mạng xã hội">
+        <li><a href="#github" aria-label="Github">Github</a></li>
+        <li><a href="#twitter" aria-label="Twitter">Twitter</a></li>
+        <li><a href="#dribbble" aria-label="Dribbble">Dribbble</a></li>
+        <li><a href="#facebook" aria-label="Facebook">Facebook</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
