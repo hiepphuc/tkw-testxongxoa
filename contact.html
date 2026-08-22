@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Liên hệ - Landwind</title>
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="font-body antialiased">
+  
+  <main id="main" class="section max-w-2xl">
+    <h1 class="font-display text-3xl font-extrabold mb-8">Liên hệ với chúng tôi</h1>
+    
+    <form action="#" method="POST" class="card space-y-6">
+      <div>
+        <label class="field-label" for="ho-ten">
+          Họ và tên <span class="text-red-600" aria-hidden="true">*</span>
+        </label>
+        <input class="field-input" id="ho-ten" name="hoTen" type="text" required autocomplete="name" />
+      </div>
+
+      <div>
+        <label class="field-label" for="email">
+          Email liên hệ <span class="text-red-600" aria-hidden="true">*</span>
+        </label>
+        <input class="field-input" id="email" name="email" type="email" required autocomplete="email" />
+      </div>
+
+      <div>
+        <label class="field-label" for="dien-thoai">
+          Số điện thoại <span class="text-red-600" aria-hidden="true">*</span>
+        </label>
+        <input class="field-input" id="dien-thoai" name="dienThoai" type="tel" required 
+               pattern="0[0-9]{9}" autocomplete="tel" inputmode="numeric" 
+               aria-describedby="dien-thoai-hint dien-thoai-error" />
+        <p class="mt-1.5 text-xs text-muted" id="dien-thoai-hint">Chúng tôi gọi qua số này, không nhắn tin quảng cáo.</p>
+        <p class="field-error" id="dien-thoai-error" role="alert"></p>
+      </div>
+
+      <div>
+        <label class="field-label" for="chu-de">Chủ đề hỗ trợ</label>
+        <select class="field-input" id="chu-de" name="chuDe">
+          <option value="tu-van">Tư vấn mua hàng</option>
+          <option value="ky-thuat">Hỗ trợ kỹ thuật</option>
+          <option value="khac">Khác</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="field-label" for="noi-dung">Nội dung chi tiết</label>
+        <textarea class="field-input" id="noi-dung" name="noiDung" rows="4"></textarea>
+      </div>
+
+      <div class="flex items-start gap-3">
+        <input type="checkbox" id="dong-y" name="dongY" required class="mt-1" />
+        <label for="dong-y" class="text-sm text-muted">
+          Tôi đồng ý với chính sách bảo mật thông tin của Landwind.
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-full">Gửi yêu cầu</button>
+    </form>
+  </main>
+
+</body>
+</html>

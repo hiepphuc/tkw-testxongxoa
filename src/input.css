@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-50: #F3E8FF;
+  --color-brand-600: #7E3AF2;
+  --color-brand-700: #6C2BD9;
+
+  --color-surface: #FFFFFF;
+  --color-surface-dark: #0e1c19; 
+  --color-surface-dark-alt: #162b27;
+
+  --color-ink: #111827;
+  --color-ink-invert: #eaf2ee;
+
+  --color-muted: #6B7280;
+  
+  --color-line: #E5E7EB;
+  --color-line-invert: #24403a;
+
+  --font-display: "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --radius-card: 0.875rem;
+}
+
+@layer components {
+  .section { @apply mx-auto w-full max-w-6xl px-5 py-20 lg:py-28; }
+
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-semibold transition-colors; }
+  .btn-primary { @apply bg-brand-600 text-white hover:bg-brand-700; }
+  
+  .card { @apply flex h-full flex-col rounded-card border border-line bg-surface p-8 shadow-sm dark:border-line-invert dark:bg-surface-dark-alt; }
+  .badge { @apply absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-600 px-3 py-1 text-xs font-semibold text-white; }
+
+  .field-label { @apply mb-1.5 block text-sm font-medium text-ink dark:text-ink-invert; }
+  .field-input { @apply block w-full rounded-lg border border-line bg-surface p-2.5 text-ink outline-none focus:border-brand-600 focus:ring-1 focus:ring-brand-600 dark:border-line-invert dark:bg-surface-dark dark:text-ink-invert dark:focus:border-brand-600; }
+  .field-error { @apply mt-1.5 text-xs text-red-600 empty:hidden; }
+}
